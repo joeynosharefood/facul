@@ -1,0 +1,26 @@
+Inicio
+	Real : AreaExt, Alt, Raio, AreaBs, AreaLat, TotalLatas;
+	Leia(Alt, Raio);
+	AreaBs <= 3,14 * (Raio * Raio),
+	AreaLat <= 2 * 3,14 * Raio * Altura;
+	AreaExt <= 2 * AreaBs + AreaLat;
+	TotalLatas <= (AreaExt / 3) / 18;
+	Escreva(TotalLatas);
+	Escreva(TotalLatas * 86,50);
+Fim
+
+Inicio
+	Caracter: CodFunc;
+	Inteiro: HorasTrab, HorasExt1, HorasExt2;
+	Real: ValorHoras, SalBruto, SalLiq, Gratif, Extra, Desc;
+	Leia(CodFunc, HorasTrab, HorasExt1, HorasExt2, ValorHoras);
+	SalBruto <= HorasTrab * ValorHoras;
+	Gratif <= SalBruto * 0.75;
+	Extra <= (HorasExt1 * (ValorHoras * 1.15)) + (HorasExt2 * (ValorHoras * 1.25));
+	Se SalBruto <= 2500 então
+		Desc <= SalBruto * 0,05;
+	Se não
+		Desc <= SalBruto * 0,1;
+	SalLiq <= (SalBruto + Gratif + Extra) - Desc;
+	Escreva(SalLiq);
+Fim
