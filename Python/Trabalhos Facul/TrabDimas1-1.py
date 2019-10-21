@@ -2,10 +2,8 @@ entry = str(input('')).split(' ')
 alt = float(entry[0])
 raio = float(entry[1])
 
-areaBs = 3.14 * (raio * raio)
-areaLat = 2 * 3.14 * raio * alt
-
-areaExt = 2 * areaBs + areaLat
+areaExt = 2 * (3.14 * (raio * raio))
+areaExt = areaExt + (2 * 3.14 * raio * alt)
 
 totalLtas = (areaExt / 3) / 18
 
